@@ -10,9 +10,13 @@
     --dark:#1b1c1a;
 }
 
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     margin:0;
@@ -230,23 +234,64 @@ button{
     display:grid;
     grid-template-columns:180px 1fr;
     gap:42px;
-    padding:40px 0;
+    padding:42px 0;
     border-bottom:1px solid var(--line);
+}
+
+.experience-item > div:last-child{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:32px 40px 30px;
+    min-height:0;
+}
+
+.experience-item img{
+    width:150px !important;
+    height:75px !important;
+    object-fit:contain;
+    object-position:left center;
+    display:block;
+    margin-bottom:20px !important;
 }
 
 .experience-item h3{
     margin:0;
-    font-size:23px;
+    font-size:28px;
+    letter-spacing:-1px;
 }
 
 .role{
-    margin-top:4px;
+    margin-top:5px;
     color:var(--muted);
+    font-size:17px;
+}
+
+.experience-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:22px 0 24px;
+}
+
+.experience-tags span{
+    padding:7px 11px;
+    background:#f1eee7;
+    border:1px solid var(--line);
+    color:var(--accent);
+    font-size:11px;
+    line-height:1;
+}
+
+.experience-item ul{
+    margin:0;
+    padding-left:20px;
 }
 
 .experience-item li{
-    margin:9px 0;
+    margin:11px 0;
     color:#4e4b45;
+    font-size:15px;
+    line-height:1.6;
 }
 
 
@@ -415,12 +460,29 @@ button{
     background:#777;
 }
 
-.fake-chart i:nth-child(1){height:45%}
-.fake-chart i:nth-child(2){height:70%}
-.fake-chart i:nth-child(3){height:55%}
-.fake-chart i:nth-child(4){height:85%}
-.fake-chart i:nth-child(5){height:62%}
-.fake-chart i:nth-child(6){height:92%}
+.fake-chart i:nth-child(1){
+    height:45%;
+}
+
+.fake-chart i:nth-child(2){
+    height:70%;
+}
+
+.fake-chart i:nth-child(3){
+    height:55%;
+}
+
+.fake-chart i:nth-child(4){
+    height:85%;
+}
+
+.fake-chart i:nth-child(5){
+    height:62%;
+}
+
+.fake-chart i:nth-child(6){
+    height:92%;
+}
 
 .fake-row{
     display:flex;
@@ -453,11 +515,25 @@ button{
     background:#888;
 }
 
-.fake-bars i:nth-child(1){height:35%}
-.fake-bars i:nth-child(2){height:65%}
-.fake-bars i:nth-child(3){height:48%}
-.fake-bars i:nth-child(4){height:90%}
-.fake-bars i:nth-child(5){height:70%}
+.fake-bars i:nth-child(1){
+    height:35%;
+}
+
+.fake-bars i:nth-child(2){
+    height:65%;
+}
+
+.fake-bars i:nth-child(3){
+    height:48%;
+}
+
+.fake-bars i:nth-child(4){
+    height:90%;
+}
+
+.fake-bars i:nth-child(5){
+    height:70%;
+}
 
 .fake-table{
     display:flex;
@@ -496,10 +572,21 @@ button{
     background:#888;
 }
 
-.fake-horizontal i:nth-child(1){width:90%}
-.fake-horizontal i:nth-child(2){width:65%}
-.fake-horizontal i:nth-child(3){width:78%}
-.fake-horizontal i:nth-child(4){width:48%}
+.fake-horizontal i:nth-child(1){
+    width:90%;
+}
+
+.fake-horizontal i:nth-child(2){
+    width:65%;
+}
+
+.fake-horizontal i:nth-child(3){
+    width:78%;
+}
+
+.fake-horizontal i:nth-child(4){
+    width:48%;
+}
 
 .terminal{
     padding:20px;
@@ -740,6 +827,7 @@ footer{
     }
 }
 
+
 @media(max-width:700px){
 
     .nav nav{
@@ -762,6 +850,15 @@ footer{
     .experience-item{
         grid-template-columns:1fr;
         gap:10px;
+    }
+
+    .experience-item > div:last-child{
+        padding:28px 24px;
+    }
+
+    .experience-item img{
+        width:130px !important;
+        height:70px !important;
     }
 
     .projects-grid,
